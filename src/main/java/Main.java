@@ -2,15 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter your weekly income: $");
-        double income = scanner.nextDouble();
 
         //Declare Variable
+        double income = 0.0;
         double taxRate = 0.0;
 
-        //Condition
+        //Prompt user income input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your weekly income: $");
+        income = scanner.nextDouble();
+
+        //Selection structures with tax withholding bracket
         if (income < 500) {
             taxRate = 0.10;
         } else if (income >= 500 && income < 1500) {
